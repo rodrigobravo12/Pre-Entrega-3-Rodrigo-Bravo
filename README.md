@@ -8,7 +8,8 @@ password: rodriboca2000
 ## Descripción
 
 El proyecto se trata de una página web de un torneo de fútbol online similar a "Fútbol Manager".
-Los jugadores pueden crear equipos, crear jugadores, crear torneos, ser managers o crear managers y divertirse con un juego de simulación.
+Los jugadores pueden crear equipos, crear jugadores, crear torneos, ser managers o crear managers
+y divertirse con un juego de simulación.
 
 ## Orden
 
