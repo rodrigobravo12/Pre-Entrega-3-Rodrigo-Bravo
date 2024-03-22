@@ -2,7 +2,7 @@
 Proyecto Final creado para el curso de Python de Coderhouse
 
 ## Superusuario
-user: rbravo
+user: rbravo //
 password: rodriboca2000
 
 ## Descripción
