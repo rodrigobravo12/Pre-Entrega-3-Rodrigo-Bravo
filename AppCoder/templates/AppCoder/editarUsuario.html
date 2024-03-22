@@ -1,0 +1,41 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">Por favor edita tu usuario</h1>
+
+
+{% endblock %}
+
+{% block parrafo %}
+
+<body>
+
+    <form action="" method="POST"> {% csrf_token %}
+
+        <table>
+    
+            {{formulario.as_table}}
+    
+        </table>
+    
+    
+        
+        <input type="submit" value="Enviar">
+    
+    </form>
+    
+</body>
+</html>
+
+<br>
+
+
+<div class="container">
+    <button><a class="navbar-brand"href="{% url 'AgregarAvatar' %}">Agrega tu avatar</a>
+    </button>
+
+{% endblock %}

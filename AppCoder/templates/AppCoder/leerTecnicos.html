@@ -1,0 +1,33 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">En esta sección podrás visualizar todos los managers</h1>
+
+{% endblock %}
+
+{% block parrafo %}
+
+{% for tecnico in tecnicos %}
+
+<p> Nombre: {{tecnico.nombre}}</p>
+<p> Apellido: {{tecnico.apellido}}</p>
+<p> Correo: {{tecnico.correo}}</p>
+
+<button>
+    <a href="{% url 'EditarTecnico' tecnico.nombre %}"> Editar manager</a>
+</button>
+
+<button>
+    <a href="{% url 'EliminarTecnico' tecnico.nombre %}"> Eliminar manager</a>
+</button>
+
+
+***********************************************
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">En esta sección podrás visualizar todos los jugadores</h1>
+
+{% endblock %}
+
+{% block parrafo %}
+
+{% for jugador in jugadores %}
+
+<p> Nombre: {{jugador.nombre}}</p>
+<p> Apellido: {{jugador.apellido}}</p>
+<p> Correo: {{jugador.correo}}</p>
+<p> Posicion: {{jugador.posicion}}</p>
+
+<button>
+    <a href="{% url 'EditarJugador' jugador.nombre %}"> Editar jugador</a>
+</button>
+
+<button>
+    <a href="{% url 'EliminarJugador' jugador.nombre %}"> Eliminar jugador</a>
+</button>
+
+***********************************************
+
+{% endfor %}
+
+{% endblock %}
+

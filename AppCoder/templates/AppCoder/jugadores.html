@@ -1,0 +1,37 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">En esta sección podrás crear tus jugadores</h1>
+
+
+{% endblock %}
+
+{% block parrafo %}
+
+
+
+    <form action="" method="POST"> {% csrf_token %}
+
+        <table>
+    
+            {{form1.as_table}}
+    
+        </table>
+    
+    
+        <input type="submit" value="Enviar">
+    
+    </form>
+    
+    <br>
+
+    <br>
+    
+    <div class="container">
+        <button> <a class="navbar-brand"href="{% url 'leerJugadores' %}">Ver Jugadores</a>
+        </button>
+{% endblock %}

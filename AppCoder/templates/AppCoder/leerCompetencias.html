@@ -1,0 +1,31 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">En esta sección podrás visualizar todas las competencias</h1>
+
+{% endblock %}
+
+{% block parrafo %}
+
+{% for competencia in competencias %}
+
+<p> Nombre: {{competencia.nombre}}</p>
+<p> Sede: {{competencia.sede}}</p>
+
+<button>
+    <a href="{% url 'EditarCompetencia' competencia.nombre %}"> Editar competencia</a>
+</button>
+
+<button>
+    <a href="{% url 'EliminarCompetencia' competencia.nombre %}"> Eliminar competencia</a>
+</button>
+
+***********************************************
+
+{% endfor %}
+
+{% endblock %}

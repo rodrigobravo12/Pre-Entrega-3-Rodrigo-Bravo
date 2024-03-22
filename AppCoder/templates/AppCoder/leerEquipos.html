@@ -1,0 +1,31 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">En esta sección podrás visualizar todos los equipos</h1>
+
+{% endblock %}
+
+{% block parrafo %}
+
+{% for equipo in equipos %}
+
+<p> Nombre: {{equipo.nombre}}</p>
+<p> Fecha Inscripcion: {{equipo.fechaInscripcion}}</p>
+
+<button>
+    <a href="{% url 'EditarEquipo' equipo.nombre %}"> Editar equipo</a>
+</button>
+
+<button>
+    <a href="{% url 'EliminarEquipo' equipo.nombre %}"> Eliminar equipo</a>
+</button>
+
+***********************************************
+
+{% endfor %}
+
+{% endblock %}

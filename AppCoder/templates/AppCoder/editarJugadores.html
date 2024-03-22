@@ -1,0 +1,35 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo %}
+
+<h1 class="mb-5">En esta sección podrás editar jugadores</h1>
+
+
+{% endblock %}
+
+
+{% block parrafo %}
+
+
+<body>
+
+    <form action="" method="POST"> {% csrf_token %}
+
+        <table>
+    
+            {{form1.as_table}}
+    
+        </table>
+    
+    
+        
+        <input type="submit" value="Enviar">
+    
+    </form>
+    
+</body>
+
+{% endblock %}
