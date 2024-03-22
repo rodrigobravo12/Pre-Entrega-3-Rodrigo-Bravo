@@ -1,5 +1,14 @@
 # Proyecto Final-Rodrigo-Bravo
-Proyecto creado para la Pre-Entrega 3 de Coderhouse
+Proyecto Final creado para el curso de Python de Coderhouse
+
+## Superusuario
+user: rbravo
+password: rodriboca2000
+
+## Descripción
+
+El proyecto se trata de una página web de un torneo de fútbol online similar a "Fútbol Manager".
+Los jugadores pueden crear equipos, crear jugadores, crear torneos, ser managers o crear managers y divertirse con un juego de simulación.
 
 ## Orden
 
@@ -9,7 +18,33 @@ Proyecto creado para la Pre-Entrega 3 de Coderhouse
 
 ## URLS
 
-1. Inicio: `http://127.0.0.1:8000/AppCoder/`
-2. Equipos: `http://127.0.0.1:8000/AppCoder/equipoFormulario/`
-3. Jugadores: `http://127.0.0.1:8000/AppCoder/jugadorFormulario/`
-4. Técnicos: `http://127.0.0.1:8000/AppCoder/tecnicoFormulario/`
+urlpatterns = [
+    path("", inicio, name="Inicio"),
+    path("equipos/", equipo, name="Equipo"),
+    path("jugadores/", jugador, name="Jugador"),
+    path("tecnicos/", tecnico, name="Tecnico"),
+    path("competencias/", competencia, name="Competencia"),
+    path("equipoFormulario/", equipoFormulario, name="EquipoFormulario"),
+    path("jugadorFormulario/", jugadorFormulario, name="JugadorFormulario"),
+    path("tecnicoFormulario/", tecnicoFormulario, name="TecnicoFormulario"),
+    path("competenciaFormulario/", competenciaFormulario, name="CompetenciaFormulario"),
+    path("buscar_equipo/", buscar_equipo),
+    path("resultados/", resultados_equipo),
+    path("leerJugadores/", leerJugadores, name="leerJugadores"),
+    path("leerEquipos/", leerEquipos, name="leerEquipos"),
+    path("leerTecnicos/", leerTecnicos, name="leerTecnicos"),
+    path("leerCompetencias/", leerCompetencias, name="leerCompetencias"),
+    path("eliminarJugadores/<jugadorNombre>/", eliminarJugadores, name="EliminarJugador"),
+    path("eliminarEquipos/<equipoNombre>/", eliminarEquipos, name="EliminarEquipo"),
+    path("eliminarTecnicos/<tecnicoNombre>/", eliminarTecnicos, name="EliminarTecnico"),
+    path("eliminarCompetencias/<competenciaNombre>/", eliminarCompetencias, name="EliminarCompetencia"),
+    path("editarJugadores/<jugadorNombre>/", editarJugadores, name="EditarJugador"),
+    path("editarEquipos/<equipoNombre>/", editarEquipos, name="EditarEquipo"),
+    path("editarTecnicos/<tecnicoNombre>/", editarTecnicos, name="EditarTecnico"),
+    path("editarCompetencias/<competenciaNombre>/", editarCompetencias, name="EditarCompetencia"),
+    path("login/", inicioSesion, name="Login"),
+    path("registro/", registro, name="Registro"),
+    path("logout/", cierreSesion, name="CerrarSesion"),
+    path("editarUsuario/", editarUsuario, name="EditarUsuario"),
+    path("agregarAvatar/", agregarAvatar, name="AgregarAvatar" ),
+    path("aboutme/", aboutMe, name= "AboutMe"),
