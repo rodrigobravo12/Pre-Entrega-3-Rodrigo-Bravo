@@ -17,6 +17,7 @@ y divertirse con un juego de simulación del deporte más lindo del mundo!!!
 1. Primero hacer las migraciones si es necesario: `python manage.py makemigrations`
 2. Luego de las migraciones: `python manage.py migrate`
 3. Finalmente se debe correr el servidor: `python manage.py runserver`
+4. Se adjunta un video explicativo sobre la navegación de la web
 
 ## URLS
 
